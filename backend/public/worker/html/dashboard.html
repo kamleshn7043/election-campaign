@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Worker Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../admin/css/style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="hamburger" onclick="toggleSidebar()">☰</span>
+  <span>Welcome, <b id="workerName"></b></span>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <h2>Worker</h2>
+
+  <a onclick="navigateWorker('dashboard.html')">🏠 Dashboard</a>
+  <a onclick="navigateWorker('stats.html')">📊 Stats</a>
+  <a onclick="navigateWorker('charts.html')">📈 Charts</a>
+  <a onclick="navigateWorker('view-voters.html')">📋 My Voters</a>
+  <a onclick="navigateWorker('add-voter.html')">➕ Add Voter</a>
+
+  <div class="sidebar-footer">
+    <button class="sidebar-logout" onclick="workerLogout()">Logout</button>
+  </div>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="dashboard">
+
+    <div class="card" onclick="navigateWorker('add-voter.html')">➕<br>Add Voter</div>
+    <div class="card" onclick="navigateWorker('view-voters.html')">📋<br>My Voters</div>
+    <div class="card" onclick="navigateWorker('stats.html')">📊<br>Stats</div>
+    <div class="card" onclick="navigateWorker('charts.html')">📈<br>Charts</div>
+
+  </div>
+</div>
+
+<script src="../js/worker.js"></script>
+<script>
+  document.getElementById("workerName").innerText =
+    localStorage.getItem("workerName") || "Worker";
+</script>
+
+</body>
+</html>

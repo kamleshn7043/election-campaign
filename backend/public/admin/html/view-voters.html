@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Voters - Election Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Voters List</h2>
+    <button class="logout-btn" onclick="goDashboard()">Back</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-container">
+    <!-- CLEAR ALL BUTTON -->
+<div style="text-align:right; margin-bottom:10px;">
+  <button class="delete-btn" onclick="clearAllVoters()">
+    🗑️ Clear All Voters
+  </button>
+</div>
+
+<!-- AREA FILTER -->
+<div style="display:flex; gap:10px; align-items:center; margin-bottom:15px;">
+  <label><b>Select Area:</b></label>
+  <select id="areaFilter" onchange="loadVoters()">
+    <option value="ALL">All Areas</option>
+  </select>
+</div>
+
+<!-- SEARCH -->
+<div style="display:flex; gap:10px; align-items:center; margin-bottom:15px;">
+  <label><b>Search:</b></label>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search name / mobile / address / area"
+    onkeyup="loadVoters()"
+    style="padding:6px 10px; width:260px;"
+  />
+</div>
+
+
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Area</th>
+          <th>Support</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="voterTable"></tbody>
+    </table>
+
+    <div style="text-align:center; margin-top:15px;">
+  <button id="loadMoreBtn" onclick="loadMoreVoters()" style="padding:8px 20px;">
+    Load More
+  </button>
+</div>
+
+
+    <p id="noData"></p>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

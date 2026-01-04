@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Voters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../admin/css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <h2>My Area Voters</h2>
+  <button class="logout-btn" onclick="goWorkerDashboard()">Back</button>
+</div>
+
+<div class="table-container">
+
+  <!-- SEARCH -->
+<div style="display:flex; gap:10px; align-items:center; margin-bottom:15px;">
+  <label><b>Search:</b></label>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search name / mobile / address / gender"
+    onkeyup="loadWorkerVoters(true)"
+    style="padding:6px 10px; width:260px;"
+  />
+</div>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Mobile</th>
+        <th>Area</th>
+        <th>Support</th>
+      </tr>
+    </thead>
+    <tbody id="workerTable"></tbody>
+  </table>
+
+  <div style="text-align:center; margin-top:15px;">
+    <button id="loadMoreBtn" class="load-more-btn" onclick="loadMoreWorkerVoters()">
+      Load More
+    </button>
+  </div>
+
+  <p id="noData"></p>
+</div>
+
+<script src="../js/worker.js"></script>
+</body>
+</html>

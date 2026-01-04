@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Voter - Election Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Add Voter</h2>
+    <button class="logout-btn" onclick="goDashboard()">Back</button>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-container">
+    <input type="text" id="name" placeholder="Voter Name" />
+
+    <input type="number" id="age" placeholder="Age" />
+
+    <select id="gender">
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <!-- 🆕 ADDRESS FIELD -->
+    <input
+      type="text"
+      id="address"
+      placeholder="Address (House No, Street, Landmark)"
+    />
+
+    <input type="text" id="mobile" placeholder="Mobile Number" />
+
+    <input type="text" id="area" placeholder="Area / Booth" />
+
+    <select id="support">
+      <option value="">Support Status</option>
+      <option>Support</option>
+      <option>Neutral</option>
+      <option>Oppose</option>
+    </select>
+
+    <button onclick="saveVoter()">Save Voter</button>
+
+    <p id="msg"></p>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

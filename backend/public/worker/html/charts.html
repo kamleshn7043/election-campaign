@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Worker Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../admin/css/style.css">
+
+  <!-- Chart.js for Support & Age) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h2>Analytics</h2>
+  <button class="logout-btn" onclick="goWorkerDashboard()">Back</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- SUPPORT CHART -->
+  <div class="card chart-card">
+    <h3>Support Analysis</h3>
+    <canvas id="supportChart"></canvas>
+  </div>
+
+  <!-- GENDER CHART -->
+<div class="card chart-card">
+  <h3>Gender Wise Voters</h3>
+  <canvas id="genderChart"></canvas>
+</div>
+
+
+  <!-- AGE CHART -->
+  <div class="card chart-card">
+    <h3>Age Wise Voters</h3>
+    <canvas id="ageChart"></canvas>
+  </div>
+
+  <!-- SURNAME GRAPH -->
+  <div class="card chart-card">
+  <h3>Surname Wise Voters (Top 5)</h3>
+  <canvas id="surnameChart"></canvas>
+</div>
+
+
+
+
+</div>
+
+<script src="../js/worker.js"></script>
+</body>
+</html>

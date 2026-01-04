@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Stats - Election Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <h2>Overall Election Stats</h2>
+  <button class="logout-btn" onclick="goDashboard()">Back</button>
+</div>
+
+<div class="dashboard">
+  <div class="card">
+    👥
+    <span>Total Voters</span>
+    <h2 id="totalVoters">0</h2>
+  </div>
+
+  <div class="card">
+    ✅
+    <span>Support</span>
+    <h2 id="supportCount">0</h2>
+  </div>
+
+  <div class="card">
+    ⚖️
+    <span>Neutral</span>
+    <h2 id="neutralCount">0</h2>
+  </div>
+
+  <div class="card">
+    ❌
+    <span>Oppose</span>
+    <h2 id="opposeCount">0</h2>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

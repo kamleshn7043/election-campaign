@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reports - Election Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- PDF Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Election</h2>
+  <a onclick="goDashboard()">🏠 Dashboard</a>
+  <a onclick="goAddVoter()">➕ Add Voter</a>
+  <a onclick="goViewVoters()">📋 View Voters</a>
+  <a class="active">📊 Reports</a>
+  <button class="sidebar-logout" onclick="logout()">Logout</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <div class="topbar" style="display:flex; justify-content:space-between; align-items:center;">
+    <span>Reports & Analytics</span>
+    <button class="logout-btn" onclick="goDashboard()">Back</button>
+  </div>
+
+  <!-- AREA FILTER -->
+  <div class="filter-bar">
+    <label><b>Select Area:</b></label>
+    <select id="areaFilter">
+      <option value="ALL">All Areas</option>
+    </select>
+  </div>
+
+  <!-- DASHBOARD GRID -->
+  <div class="dashboard">
+
+    <!-- SUPPORT -->
+    <div class="card chart-card">
+      <h3>Support Status</h3>
+      <canvas id="supportChart"></canvas>
+      <button class="download-btn" onclick="downloadSupportReport()">⬇️ Download Support Report</button>
+    </div>
+
+    <!-- GENDER -->
+    <div class="card chart-card">
+      <h3>Gender Wise Voters</h3>
+      <canvas id="genderChart"></canvas>
+      <button class="download-btn" onclick="downloadGenderReport()">⬇️ Download Gender Report</button>
+    </div>
+
+    <!-- AGE -->
+    <div class="card chart-card">
+      <h3>Age Wise Voters</h3>
+      <canvas id="ageChart"></canvas>
+      <button class="download-btn" onclick="downloadAgeReport()">⬇️ Download Age Report</button>
+    </div>
+
+    <!-- SURNAME -->
+    <div class="card chart-card">
+      <h3>Surname Wise Voters (Top 5)</h3>
+      <canvas id="surnameChart"></canvas>
+      <button class="download-btn" onclick="downloadSurnameReport()">⬇️ Download Surname Report</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/reports.js"></script>
+
+</body>
+</html>

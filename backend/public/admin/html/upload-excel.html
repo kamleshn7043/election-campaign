@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Excel - Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- SheetJS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Election</h2>
+  <a onclick="goDashboard()">🏠 Dashboard</a>
+  <a onclick="goAddVoter()">➕ Add Voter</a>
+  <a onclick="window.location.href='upload-excel.html'" class="active">📤 Upload Excel</a>
+  <a onclick="goViewVoters()">📋 View Voters</a>
+  <a onclick="window.location.href='reports.html'">📊 Reports</a>
+  <button class="sidebar-logout" onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+  <div class="topbar" style="display:flex; justify-content:space-between; align-items:center;">
+    <span>Upload Voters Excel</span>
+    <button class="logout-btn" onclick="goDashboard()">Back</button>
+  </div>
+
+  <div class="form-container">
+    <input type="file" id="excelFile" accept=".xlsx,.xls">
+    <button onclick="uploadExcel()">Upload Excel</button>
+    <p id="msg"></p>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/excel-upload.js"></script>
+</body>
+</html>
