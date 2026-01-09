@@ -8,11 +8,18 @@
   font-family: "Poppins", Arial, sans-serif;
 }
 
+/* body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f97316, #14b8a6);
+  color: #111;
+} */
+
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  background: linear-gradient(135deg, #f97316, #fb923c);
   color: #111;
 }
+
 
 /* =======================
    LOGIN PAGE
@@ -35,7 +42,7 @@ body {
 }
 
 .login-container h2 {
-  color: #0f766e;
+  color: #f97316;
   margin-bottom: 6px;
 }
 
@@ -56,7 +63,7 @@ body {
 .login-container button {
   width: 100%;
   padding: 13px;
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -65,7 +72,7 @@ body {
 }
 
 .login-container button:hover {
-  background: #0d5f58;
+  background: #ea580c;
 }
 
 #errorMsg {
@@ -113,7 +120,7 @@ body {
   font-size: 26px;
   cursor: pointer;
   z-index: 1100;
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
   padding: 6px 12px;
   border-radius: 6px;
@@ -128,7 +135,7 @@ body {
   left: -260px;
   width: 260px;
   height: 100vh;
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
   padding: 20px 15px;
   display: flex;
@@ -272,7 +279,7 @@ body {
 .form-container button {
   width: 100%;
   padding: 13px;
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -304,7 +311,7 @@ th, td {
 }
 
 th {
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
 }
 
@@ -324,7 +331,7 @@ th {
   margin-top: 12px;
   padding: 8px 14px;
   border: none;
-  background: #0f766e;
+  background: #f97316;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
@@ -336,8 +343,8 @@ th {
 
 .filter-bar {
   padding: 12px 20px;
-  background: #f0fdfa;
-  border-bottom: 1px solid #d1fae5;
+  background: #fff7ed;
+  border-bottom: 1px solid #fed7aa;
 }
 
 /* =======================
@@ -452,7 +459,7 @@ th {
   top: 0;
   height: 100%;
   width: 260px;
-  background: #0f766e;
+  background: #f97316;
   color: white;
   transition: left 0.3s ease;
   z-index: 1001;
